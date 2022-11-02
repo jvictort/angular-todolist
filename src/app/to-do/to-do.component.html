@@ -1,0 +1,14 @@
+<form class="form-container" (submit)="onSubmit()">
+    <input type="text" name="todoInput" placeholder="Insira sua tarefa" autocomplete="off" minlength="1" maxlength="20" [(ngModel)]="todoInput">
+    <button type="submit" class="todo-submit">Adicionar</button>
+</form>
+<ul>
+    <li class="todo" *ngFor="let todo of todos; let i = index">
+        <div class="id">{{ i }}</div>
+        <div class="content {{ todo.isCompleted ? 'is-completed' : '' }}">{{ todo.content }}</div>
+        <div class="todo-control">
+            <input type="checkbox" class="complete-checkbox" [(ngModel)]="todos[i].isCompleted">
+            <button class="delete" (click)="onDelete(i)">&#10006;</button>
+        </div>
+    </li>
+</ul>

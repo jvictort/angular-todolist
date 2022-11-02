@@ -1,0 +1,98 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container input {
+    flex: 1 1 100%;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #AAA;
+}
+
+.form-container .todo-submit {
+    background-color: #078d43;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    transition: ease-out 0.5s;
+    font-weight: 600;
+    transition: ease-out 0.5s;
+}
+
+.form-container .todo-submit:hover {
+    background-color: #057939;
+    cursor: pointer;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #FFF;
+    border-bottom: 1px solid #DDD;
+}
+
+.todo:nth-child(even) {
+    background-color: #EEE;
+}
+
+.todo:last-of-type {
+    border-bottom: 0;
+}
+
+.todo .id {
+    flex: 1 1 50px;
+}
+
+.todo .content {
+    flex: 1 1 100%;
+}
+
+.todo .todo-control {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.todo .todo-control .complete-checkbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #DDD;
+}
+
+.todo .todo-control .complete-checkbox:hover {
+    cursor: pointer;
+    background-color: #CCC;
+}
+
+.todo .todo-control .delete {
+    background-color: #c71919;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70px;
+    height: 40px;
+    transition: ease-out 0.5s;
+}
+
+.todo .todo-control .delete:hover {
+    cursor: pointer;
+    background-color: #af1616;
+}
+
+.is-completed {
+    text-decoration: line-through;
+}
+
